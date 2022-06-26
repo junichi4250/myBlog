@@ -1,0 +1,22 @@
+.profileCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #ffffff;
+  box-shadow: 0 -3px 10px rgba(#123d52, 0.2);
+}
+
+.image {
+  background-image: url("https://dummyimage.com/100x100/03488d/fff");
+  background-size: cover;
+  background-position: center;
+}
+
+.fullName {
+  margin-top: 16px;
+}
+
+.role {
+  margin-top: 5px;
+}
