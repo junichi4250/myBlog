@@ -1,0 +1,43 @@
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  padding-top: 30px;
+  padding-bottom: 10px;
+
+  margin-top: 20px;
+
+  background: #e9e9f0;
+}
+
+.label {
+  color: #7e6b6b;
+  text-decoration: none;
+
+  font-size: 12px;
+
+  /* &:hover {
+
+      text-decoration: underline;
+    }
+
+
+    &:focus,
+    &:active {
+
+      opacity: 0.6;
+    } */
+}
+
+.guide {
+  /* @include EqualLeftAndRightPaddings(10px); */
+
+  color: #7e6b6b;
+}
+
+.label__noLink {
+  color: #222222;
+
+  font-size: 12px;
+}
