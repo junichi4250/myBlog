@@ -9,7 +9,12 @@ export type Blog = {
   id: string;
   title: string;
   body: string;
+  category: Category;
   publishedAt: number;
+};
+
+type Category = {
+  name: string;
 };
 
 export const Home: React.FC<Props> = ({ blog }) => {
