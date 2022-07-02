@@ -1,9 +1,12 @@
 import React from 'react'
-import Breadcrumb from '../../components/breadcrumb/Breadcrumb'
-import MetaData from '../../module/metaData/MetaData'
-import { pagesPath } from '../../module/url/pagesPath'
-import { SiteUrl } from '../../module/url/siteUrl'
-import styles from './index.module.scss'
+// style
+import styles from './privacy.module.scss'
+// components
+import Breadcrumb from '@/components/breadcrumb/Breadcrumb'
+// module
+import MetaData from '@/module/metaData/MetaData'
+import { pagesPath } from '@/module/url/pagesPath'
+import { SiteUrl } from '@/module/url/siteUrl'
 
 const Privacy: React.FC = () => {
   const breadcrumbLinks: Breadcrumb[] = [
