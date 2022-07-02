@@ -3,6 +3,7 @@ import Breadcrumb from "../../components/breadcrumb/Breadcrumb";
 import MetaData from "../../module/metaData/MetaData";
 import { pagesPath } from "../../module/url/pagesPath";
 import { SiteUrl } from "../../module/url/siteUrl";
+import styles from "./index.module.scss";
 
 const Privacy: React.FC = () => {
   const breadcrumbLinks: Breadcrumb[] = [
@@ -27,8 +28,7 @@ const Privacy: React.FC = () => {
         twitterCardType="summary_large_image"
       />
       <Breadcrumb links={breadcrumbLinks} />
-      {/* <main className={styles.privacyPage}> */}
-      <main>
+      <main className={styles.privacyPage}>
         <h1 className="heading1">プライバシーポリシー</h1>
 
         <p>
