@@ -1,25 +1,25 @@
-import Link from "next/link";
-import React from "react";
-import { UrlObject } from "url";
-import styles from "./breadcrumb.module.css";
+import { UrlObject } from 'url'
+import Link from 'next/link'
+import React from 'react'
+import styles from './breadcrumb.module.css'
 
 type Props = {
-  links: Breadcrumb[];
-};
+  links: Breadcrumb[]
+}
 
 type Breadcrumb = {
-  label: string;
-  path: string | UrlObject;
-};
+  label: string
+  path: string | UrlObject
+}
 
 const Breadcrumb: React.FC<Props> = ({ links }) => {
-  if (links.length === 0) return null;
+  if (links.length === 0) return null
   return (
     <div className={styles.breadcrumb}>
       {links.map((link: Breadcrumb, index: number) => {
         return (
           <React.Fragment key={link.label}>
-            {index > 0 && <span className={styles.guide}>{">"}</span>}
+            {index > 0 && <span className={styles.guide}>{'>'}</span>}
             {link.path ? (
               <Link href={link.path}>
                 <a className={styles.label}>{link.label}</a>
@@ -28,10 +28,10 @@ const Breadcrumb: React.FC<Props> = ({ links }) => {
               <span className={styles.label__noLink}>{link.label}</span>
             )}
           </React.Fragment>
-        );
+        )
       })}
     </div>
-  );
-};
+  )
+}
 
-export default Breadcrumb;
+export default Breadcrumb

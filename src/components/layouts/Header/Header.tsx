@@ -1,8 +1,8 @@
-import React from "react";
-import { AppBar, makeStyles } from "@material-ui/core";
-import Link from "next/link";
-import styles from "./header.module.scss";
-import { pagesPath } from "@/module/url/pagesPath";
+import { AppBar, makeStyles } from '@material-ui/core'
+import Link from 'next/link'
+import React from 'react'
+import styles from './header.module.scss'
+import { pagesPath } from '@/module/url/pagesPath'
 
 const Header: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const Header: React.FC = () => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

@@ -1,10 +1,10 @@
-import React from "react";
-import Footer from "./Footer/Footer";
-import Header from "./Header/Header";
+import React from 'react'
+import Footer from './Footer/Footer'
+import Header from './Header/Header'
 
 type Props = {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 
 const Layouts: React.FC<Props> = ({ children }) => {
   return (
@@ -13,7 +13,7 @@ const Layouts: React.FC<Props> = ({ children }) => {
       <main>{children}</main>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Layouts;
+export default Layouts

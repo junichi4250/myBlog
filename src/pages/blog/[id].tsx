@@ -1,12 +1,12 @@
-import { Blog } from "..";
-import Breadcrumb from "../../components/breadcrumb/Breadcrumb";
-import { client } from "../../lib/client";
-import { pagesPath } from "../../module/url/pagesPath";
-import { SiteUrl } from "../../module/url/siteUrl";
+import { Blog } from '..'
+import Breadcrumb from '../../components/breadcrumb/Breadcrumb'
+import { client } from '../../lib/client'
+import { pagesPath } from '../../module/url/pagesPath'
+import { SiteUrl } from '../../module/url/siteUrl'
 
 type Props = {
-  blog: Blog;
-};
+  blog: Blog
+}
 
 export const BlogId: React.FC<Props> = ({ blog }) => {
   const breadcrumb: Breadcrumb[] = [
@@ -22,7 +22,7 @@ export const BlogId: React.FC<Props> = ({ blog }) => {
       path: pagesPath.$url().pathname,
       label: blog.title,
     },
-  ];
+  ]
   return (
     <main>
       <Breadcrumb links={breadcrumb} />
@@ -35,25 +35,25 @@ export const BlogId: React.FC<Props> = ({ blog }) => {
         }}
       />
     </main>
-  );
-};
+  )
+}
 
-export default BlogId;
+export default BlogId
 
 export const getStaticPaths = async () => {
-  const data = await client.get({ endpoint: "blog" });
+  const data = await client.get({ endpoint: 'blog' })
 
-  const paths = data.contents.map((content: Blog) => `/blog/${content.id}`);
-  return { paths, fallback: false };
-};
+  const paths = data.contents.map((content: Blog) => `/blog/${content.id}`)
+  return { paths, fallback: false }
+}
 
 export const getStaticProps = async (context: { params: Blog }) => {
-  const id = context.params.id;
-  const data = await client.get({ endpoint: "blog", contentId: id });
+  const id = context.params.id
+  const data = await client.get({ endpoint: 'blog', contentId: id })
 
   return {
     props: {
       blog: data,
     },
-  };
-};
+  }
+}

@@ -1,9 +1,9 @@
-import React from "react";
-import Breadcrumb from "../../components/breadcrumb/Breadcrumb";
-import MetaData from "../../module/metaData/MetaData";
-import { pagesPath } from "../../module/url/pagesPath";
-import { SiteUrl } from "../../module/url/siteUrl";
-import styles from "./index.module.scss";
+import React from 'react'
+import Breadcrumb from '../../components/breadcrumb/Breadcrumb'
+import MetaData from '../../module/metaData/MetaData'
+import { pagesPath } from '../../module/url/pagesPath'
+import { SiteUrl } from '../../module/url/siteUrl'
+import styles from './index.module.scss'
 
 const Privacy: React.FC = () => {
   const breadcrumbLinks: Breadcrumb[] = [
@@ -15,21 +15,21 @@ const Privacy: React.FC = () => {
       path: pagesPath.privacy.$url().pathname,
       label: SiteUrl.PrivacyPolicy.pageName,
     },
-  ];
+  ]
   return (
     <>
       <MetaData
         title={SiteUrl.PrivacyPolicy.pageName}
-        description="プライバシーポリシーのページです。"
+        description='プライバシーポリシーのページです。'
         noDefaultDescription={false}
-        ogpImageURI={""}
+        ogpImageURI={''}
         url={pagesPath.privacy.$url().pathname}
-        type="article"
-        twitterCardType="summary_large_image"
+        type='article'
+        twitterCardType='summary_large_image'
       />
       <Breadcrumb links={breadcrumbLinks} />
       <main className={styles.privacyPage}>
-        <h1 className="heading1">プライバシーポリシー</h1>
+        <h1 className='heading1'>プライバシーポリシー</h1>
 
         <p>
           jun
@@ -37,7 +37,7 @@ const Privacy: React.FC = () => {
           その他の関係法令を遵守すると共に、以下に定めるプライバシーポリシーにしたがって、個人情報を安全かつ適切に取り扱うことを宣言いたします。
         </p>
 
-        <h2 className="heading2 heading2__underline">個人情報</h2>
+        <h2 className='heading2 heading2__underline'>個人情報</h2>
 
         <p>
           「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，生存する個人に関する情報であって，
@@ -45,7 +45,7 @@ const Privacy: React.FC = () => {
           及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。
         </p>
 
-        <h2 className="heading2 heading2__underline">個人情報の利用目的</h2>
+        <h2 className='heading2 heading2__underline'>個人情報の利用目的</h2>
 
         <p>
           当サイトでは、お客様からのお問い合わせやサービスへのお申し込み等を通じて、
@@ -54,24 +54,20 @@ const Privacy: React.FC = () => {
         </p>
 
         <p>お客様からのお問い合わせ等に対応するため。</p>
-        <p>
-          当サイトのサービス向上・改善、新サービスを検討するための分析等を行うため。
-        </p>
+        <p>当サイトのサービス向上・改善、新サービスを検討するための分析等を行うため。</p>
         <p>
           お客様からお預かりした個人情報を、個人情報保護法その他の法令に基づき開示が認められる場合を除き、
           ご本人様の同意を得ずに第三者に提供することはありません。
         </p>
 
-        <h2 className="heading2 heading2__underline">
+        <h2 className='heading2 heading2__underline'>
           Cookie(クッキー)及びその他の技術、解析ツールについて
         </h2>
 
         <p>
-          本ウェブサイトは、Cookie及びこれに類する 技術
-          を利用することがあります。 これらの技術
-          は、当社による本サービスの利用状況等の把握
-          に役立ち、サービス向上に資するものです。 Cookieを無効化
-          されたいユーザーは、ウェブブラウザの設定を変更することによりCookieを無効化
+          本ウェブサイトは、Cookie及びこれに類する 技術 を利用することがあります。 これらの技術
+          は、当社による本サービスの利用状況等の把握 に役立ち、サービス向上に資するものです。
+          Cookieを無効化 されたいユーザーは、ウェブブラウザの設定を変更することによりCookieを無効化
           してください。 ただし、Cookieを無効化 すると 、本サービスの一部の機
           能をご利用いただけなくなる場合があります。
           また本ウェブサイトは、Googleによる解析ツール「Googleアナリティクス」を利用しています。
@@ -81,9 +77,7 @@ const Privacy: React.FC = () => {
           詳しくはGoogleアナリティクス利用規約をご確認ください。
         </p>
 
-        <h2 className="heading2 heading2__underline">
-          プライバシーポリシーの変更
-        </h2>
+        <h2 className='heading2 heading2__underline'>プライバシーポリシーの変更</h2>
 
         <p>
           本ポリシーの内容は，法令その他本ポリシーに別段の定めのある事項
@@ -94,7 +88,7 @@ const Privacy: React.FC = () => {
         </p>
       </main>
     </>
-  );
-};
+  )
+}
 
-export default Privacy;
+export default Privacy

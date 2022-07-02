@@ -1,7 +1,7 @@
-import Link from "next/link";
-import React from "react";
-import { pagesPath } from "../../../module/url/pagesPath";
-import styles from "./footer.module.scss";
+import Link from 'next/link'
+import React from 'react'
+import { pagesPath } from '../../../module/url/pagesPath'
+import styles from './footer.module.scss'
 
 const Footer: React.FC = () => {
   return (
@@ -18,16 +18,14 @@ const Footer: React.FC = () => {
           </Link>
         </li>
         <li className={styles.footerLink} onClick={() => undefined}>
-          <Link href={""}>
+          <Link href={''}>
             <a className={styles.link}>プロフィール</a>
           </Link>
         </li>
       </ul>
-      <p className={styles.copyright}>
-        Copyright © Junichi Kato. All rights reserved
-      </p>
+      <p className={styles.copyright}>Copyright © Junichi Kato. All rights reserved</p>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
