@@ -1,7 +1,7 @@
 import { UrlObject } from 'url'
 import Link from 'next/link'
 import React from 'react'
-import styles from './breadcrumb.module.css'
+import styles from './breadcrumb.module.scss'
 
 type Props = {
   links: Breadcrumb[]
