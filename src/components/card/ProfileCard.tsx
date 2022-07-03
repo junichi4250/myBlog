@@ -1,6 +1,8 @@
 import React from 'react'
+// icon
 import IconAndLink from '../icon/IconAndLink'
-import styles from './profileCard.module.css'
+// style
+import styles from './profileCard.module.scss'
 
 type Props = {
   targetProfile: Pick<Profile, 'image' | 'familyName' | 'lastName' | 'role'>

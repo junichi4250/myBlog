@@ -1,7 +1,9 @@
 import React from 'react'
+// icon
 import GithubIcon from './GithubIcon'
 import TwitterIcon from './TwitterIcon'
-import styles from './iconAndLink.module.css'
+// style
+import styles from './iconAndLink.module.scss'
 
 type Props = {
   iconType: IconType
