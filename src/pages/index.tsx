@@ -4,38 +4,45 @@ import ProfileCard, { Profile } from '../components/card/ProfileCard'
 import { client } from '../lib/client'
 import MetaData from '../module/metaData/MetaData'
 import { SiteUrl } from '../module/url/siteUrl'
+import styles from './top.module.scss'
 
-export type Props = {
+type Props = {
   blog: Blog[]
+  profile: Profile
 }
 
 export type Blog = {
   id: string
   title: string
   body: string
-  category: Category
+  mainImage: ImageType
+  categories: Category[]
+  createdAt: string
+  updatedAt: string
   publishedAt: number
 }
 
-type Category = {
+export type Category = {
+  id: string
   name: string
+}
+
+type ImageType = {
+  url: string
+  width: number
+  height: number
 }
 
 export const Home: React.FC<Props> = ({ blog }) => {
   // データの仮置き
   const myProfile: Profile = {
-    familyName: '苗字',
-    lastName: '名前',
-    role: '',
+    familyName: '加藤',
+    lastName: '潤一',
     image: {
       url: '',
       width: 0,
       height: 0,
     },
-    createdAt: 0,
-    publishedAt: 0,
-    rebisedAt: '',
-    updatedAt: '',
   }
   return (
     <>
@@ -48,17 +55,22 @@ export const Home: React.FC<Props> = ({ blog }) => {
         type='website'
         twitterCardType='summary_large_image'
       />
-      <div>
-        <ul>
-          {blog.map((blog: Blog) => (
-            <BlogCard key={blog.id} blog={blog} />
-          ))}
-        </ul>
-      </div>
+      <main className={styles.topPage}>
+        <div className={styles.mainSection}>
+          <div>
+            <ul>
+              {blog.map((blog: Blog) => (
+                <BlogCard key={blog.id} blog={blog} />
+              ))}
+            </ul>
+          </div>
 
-      {/* プロフィール */}
-      {/* <div className={styles.profileBlock}> */}
-      <ProfileCard targetProfile={myProfile} />
+          {/* プロフィール */}
+          <div className={styles.profileBlock}>
+            <ProfileCard profile={myProfile} />
+          </div>
+        </div>
+      </main>
     </>
   )
 }
