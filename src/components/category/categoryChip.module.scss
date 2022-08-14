@@ -1,0 +1,35 @@
+@import 'src/assets/styles/global/mixins/mixins';
+@import 'src/assets/styles/global/valiables/valiables';
+
+.categoryBadge {
+  @include EqualLeftAndRightPaddings(10px);
+  @include EqualTopAndBottomPaddings(6px);
+
+  display: inline-block;
+
+  background: $MAIN_COLOR_SKY_BLUE;
+  color: white;
+
+  border: 2px solid $MAIN_COLOR_SKY_BLUE;
+  border-radius: 5px;
+
+  font-size: 12px;
+
+  text-decoration: none;
+
+  &__linkStyle {
+    &:hover {
+      color: $MAIN_COLOR_SKY_BLUE;
+      background: #ffffff;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      color: $MAIN_COLOR_SKY_BLUE;
+      background: #ffffff;
+    }
+  }
+}
